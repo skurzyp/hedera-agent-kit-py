@@ -35,6 +35,9 @@ CREATE_TOPIC_TOOL = core_consensus_plugin_tool_names["CREATE_TOPIC_TOOL"]
 GET_HBAR_BALANCE_QUERY_TOOL = core_account_query_plugin_tool_names[
     "GET_HBAR_BALANCE_QUERY_TOOL"
 ]
+SUBMIT_TOPIC_MESSAGE_TOOL = core_consensus_plugin_tool_names[
+    "SUBMIT_TOPIC_MESSAGE_TOOL"
+]
 GET_EXCHANGE_RATE_TOOL = core_misc_query_plugin_tool_names["GET_EXCHANGE_RATE_TOOL"]
 GET_TOPIC_INFO_QUERY_TOOL = core_consensus_query_plugin_tool_names[
     "GET_TOPIC_INFO_QUERY_TOOL"
@@ -83,6 +86,7 @@ TOOLKIT_OPTIONS: LangchainTestOptions = LangchainTestOptions(
         GET_EXCHANGE_RATE_TOOL,
         UPDATE_ACCOUNT_TOOL,
         DELETE_ACCOUNT_TOOL,
+        SUBMIT_TOPIC_MESSAGE_TOOL,
         GET_ACCOUNT_QUERY_TOOL,
     ],
     plugins=[
