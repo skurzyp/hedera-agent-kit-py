@@ -15,10 +15,12 @@ from hedera_agent_kit_py.plugins import (
     core_evm_plugin,
     core_misc_query_plugin_tool_names,
     core_misc_query_plugin,
-    core_transaction_query_plugin,
-    core_transaction_query_plugin_tool_names,
     core_token_query_plugin_tool_names,
     core_token_query_plugin,
+    core_token_plugin_tool_names,
+    core_token_plugin,
+    core_transaction_query_plugin,
+    core_transaction_query_plugin_tool_names,
 )
 
 from hedera_agent_kit_py.shared import AgentMode
@@ -51,6 +53,7 @@ GET_TOPIC_INFO_QUERY_TOOL = core_consensus_query_plugin_tool_names[
 
 GET_ACCOUNT_QUERY_TOOL = core_account_query_plugin_tool_names["GET_ACCOUNT_QUERY_TOOL"]
 UPDATE_TOPIC_TOOL = core_consensus_plugin_tool_names["UPDATE_TOPIC_TOOL"]
+MINT_FUNGIBLE_TOKEN_TOOL = core_token_plugin_tool_names["MINT_FUNGIBLE_TOKEN_TOOL"]
 GET_TOKEN_INFO_QUERY_TOOL = core_token_query_plugin_tool_names[
     "GET_TOKEN_INFO_QUERY_TOOL"
 ]
@@ -103,6 +106,7 @@ TOOLKIT_OPTIONS: LangchainTestOptions = LangchainTestOptions(
         GET_TRANSACTION_RECORD_QUERY_TOOL,
         TRANSFER_HBAR_WITH_ALLOWANCE_TOOL,
         UPDATE_TOPIC_TOOL,
+        MINT_FUNGIBLE_TOKEN_TOOL,
         GET_TOKEN_INFO_QUERY_TOOL,
     ],
     plugins=[
@@ -113,6 +117,7 @@ TOOLKIT_OPTIONS: LangchainTestOptions = LangchainTestOptions(
         core_misc_query_plugin,
         core_evm_plugin,
         core_transaction_query_plugin,
+        core_token_plugin,
         core_token_query_plugin,
     ],
     agent_mode=AgentMode.AUTONOMOUS,
